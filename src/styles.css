@@ -1,0 +1,320 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-purple: var(--purple);
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Terminal blueprint — dark by default */
+  --background: #0a0a0b;
+  --foreground: #e2e8f0;
+  --card: #121214;
+  --card-foreground: #e2e8f0;
+  --popover: #121214;
+  --popover-foreground: #e2e8f0;
+  --primary: #22d3ee;
+  --primary-foreground: #0a0a0b;
+  --secondary: #121214;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1e1e24;
+  --muted-foreground: #94a3b8;
+  --accent: #22d3ee;
+  --accent-foreground: #0a0a0b;
+  --destructive: #f87171;
+  --destructive-foreground: #0a0a0b;
+  --border: rgb(255 255 255 / 5%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #22d3ee;
+  --chart-1: #22d3ee;
+  --chart-2: #4ade80;
+  --chart-3: #c084fc;
+  --chart-4: #f87171;
+  --chart-5: #fbbf24;
+  --sidebar: #121214;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #22d3ee;
+  --sidebar-primary-foreground: #0a0a0b;
+  --sidebar-accent: #1e1e24;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: rgb(255 255 255 / 5%);
+  --sidebar-ring: #22d3ee;
+  --success: #4ade80;
+  --purple: #c084fc;
+}
+
+.dark {
+  --background: #0a0a0b;
+  --foreground: #e2e8f0;
+  --card: #121214;
+  --card-foreground: #e2e8f0;
+  --popover: #121214;
+  --popover-foreground: #e2e8f0;
+  --primary: #22d3ee;
+  --primary-foreground: #0a0a0b;
+  --secondary: #121214;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1e1e24;
+  --muted-foreground: #94a3b8;
+  --accent: #22d3ee;
+  --accent-foreground: #0a0a0b;
+  --destructive: #f87171;
+  --destructive-foreground: #0a0a0b;
+  --border: rgb(255 255 255 / 5%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #22d3ee;
+  --chart-1: #22d3ee;
+  --chart-2: #4ade80;
+  --chart-3: #c084fc;
+  --chart-4: #f87171;
+  --chart-5: #fbbf24;
+  --sidebar: #121214;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #22d3ee;
+  --sidebar-primary-foreground: #0a0a0b;
+  --sidebar-accent: #1e1e24;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: rgb(255 255 255 / 5%);
+  --sidebar-ring: #22d3ee;
+  --success: #4ade80;
+  --purple: #c084fc;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    background-image:
+      radial-gradient(circle at 15% 0%, rgb(34 211 238 / 8%), transparent 28rem),
+      radial-gradient(circle at 90% 32%, rgb(192 132 252 / 5%), transparent 30rem),
+      linear-gradient(135deg, rgb(255 255 255 / 2%) 1px, transparent 1px),
+      linear-gradient(45deg, rgb(255 255 255 / 1.5%) 1px, transparent 1px);
+    background-size:
+      auto,
+      auto,
+      72px 72px,
+      72px 72px;
+    background-position:
+      center,
+      center,
+      center,
+      36px 36px;
+    color: var(--color-foreground);
+  }
+
+  ::selection {
+    background: rgb(34 211 238 / 30%);
+    color: var(--color-foreground);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sans);
+    text-wrap: balance;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+header {
+  background: rgb(10 10 11 / 82%) !important;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 4%),
+    0 18px 50px rgb(0 0 0 / 18%);
+}
+
+main > section {
+  position: relative;
+  scroll-margin-top: 7rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main > section:first-child {
+  order: -2;
+}
+
+main > #bring {
+  order: -1;
+}
+
+main > #why {
+  order: -1;
+}
+
+main > #process {
+  order: 2;
+}
+
+main > #journey,
+main > #patent,
+main > #built {
+  order: 6;
+}
+
+main > #bring {
+  order: 1;
+}
+
+main > #beliefs {
+  order: 3;
+}
+
+main > #story {
+  order: 5;
+}
+
+main > #leadership {
+  order: 7;
+}
+
+main > #why-me {
+  order: 8;
+}
+
+main > #vision {
+  order: 9;
+}
+
+main > #connect {
+  order: 10;
+}
+
+main > section:nth-child(odd) {
+  background-color: rgb(18 18 20 / 28%);
+}
+
+main > section:nth-child(3n) {
+  background-image: linear-gradient(90deg, transparent, rgb(34 211 238 / 3%), transparent);
+}
+
+main > section:first-child {
+  min-height: min(820px, calc(100vh - 88px));
+  display: grid;
+  align-items: center;
+}
+
+main > section:first-child h1 {
+  font-size: clamp(4rem, 10vw, 8.5rem);
+  letter-spacing: -0.07em;
+  line-height: 0.88;
+  text-shadow: 0 0 60px rgb(34 211 238 / 8%);
+}
+
+main > section:first-child h1 span {
+  background-image: linear-gradient(100deg, var(--primary), var(--purple) 75%);
+}
+
+main > section:first-child a,
+main > section:last-child a.inline-block {
+  box-shadow: 0 12px 30px rgb(34 211 238 / 12%);
+}
+
+main > section > div > div.rounded-2xl,
+main > section article,
+main > section > div > div.rounded-xl,
+main > section > div > div.rounded-lg {
+  box-shadow: 0 18px 45px rgb(0 0 0 / 14%);
+}
+
+main > section article:hover,
+main > section > div > div.rounded-2xl:hover,
+main > section > div > div.rounded-xl:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 55px rgb(0 0 0 / 24%);
+}
+
+main > section article,
+main > section > div > div.rounded-2xl,
+main > section > div > div.rounded-xl {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  main > section:first-child {
+    min-height: 680px;
+  }
+
+  main > section:first-child h1 {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+}
