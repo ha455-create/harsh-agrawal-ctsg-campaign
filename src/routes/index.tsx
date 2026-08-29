@@ -51,22 +51,21 @@ const PROJECTS = [
   {
     index: "01",
     kicker: "Industrial AI",
-    title: "AI-Powered Inspection",
+    title: "Robotics & Vision Inspection",
     summary:
-      "An automated computer vision system designed to improve safety and quality inspection in a critical industrial supply chain.",
-    stack: ["Computer Vision", "AI", "Automation", "Edge Computing"],
+      "Built robotic inspection workflows that integrated AI vision to detect defects across precision industrial components and production systems.",
+    stack: ["Robotics", "Computer Vision", "AI", "Automation", "Defect Detection"],
     listLabel: "What I worked on",
     list: [
-      "Automated visual inspection",
-      "Real-time defect detection",
-      "Industrial hardware integration",
-      "High-throughput processing",
-      "Production deployment",
+      "Programmed robotic inspection workflows",
+      "Integrated AI vision for defect detection",
+      "Built quality checks for axle chassis components",
+      "Optimized throughput and production reliability",
+      "Deployed automation in real factory conditions",
     ],
     noteLabel: "Impact",
-    note: `Patent: "${PATENT.title}" - Patent No. ${PATENT.number}.`,
+    note: "Improved overall product quality by rejecting defective units before they reached downstream stages, helping the client avoid more than $2,000 in daily penalties while reinforcing a safety-first inspection standard.",
     featured: true,
-    patentUrl: PATENT.url,
   },
   {
     index: "02",
@@ -136,29 +135,29 @@ const FIRST_HUNDRED_DAYS = [
     days: "DAYS 1–20",
     title: "LISTEN",
     description:
-      "Meet with every Program Representative and Studio Representative to understand what students are building, what they need, and where opportunities exist.",
-    output: "A clear map of student projects, skills, needs, and technical gaps.",
+      "Meet with every Program Representative and Studio Representative to understand what students are building, what they need and where opportunities exist.",
+    output: "A clear map of student projects, skills, needs and technical gaps.",
   },
   {
     days: "DAYS 21–40",
     title: "CONNECT",
     description:
-      "Identify opportunities to connect students, projects, programs, studios, and external partners where collaboration can create something stronger.",
+      "Identify opportunities to connect students, projects, programs, studios and external partners where collaboration can create something stronger.",
     output: "The first set of cross-program collaborations and external connections.",
   },
   {
     days: "DAYS 41–70",
     title: "BUILD",
     description:
-      "Support selected teams with the right technical resources, collaborators, industry feedback, and expertise to turn ideas into working prototypes.",
+      "Support selected teams with the right technical resources, collaborators, industry feedback and expertise to turn ideas into working prototypes.",
     output: "Multidisciplinary projects moving from idea to prototype.",
   },
   {
     days: "DAYS 71–100",
     title: "DEPLOY",
     description:
-      "Help promising projects move beyond the prototype through user testing, industry pilots, deployment, and identifying their next opportunity.",
-    output: "Projects with a clear path to pilot, deployment, research, or startup.",
+      "Help promising projects move beyond the prototype through user testing, industry pilots, deployment and identifying their next opportunity.",
+    output: "Projects with a clear path to pilot, deployment, research or startup.",
   },
 ];
 
@@ -181,7 +180,7 @@ const BELIEFS = [
   },
   {
     t: "CONNECT WHAT EXISTS.",
-    d: "Make Cornell Tech's people, projects, and opportunities easier to discover.",
+    d: "Make Cornell Tech's people, projects and opportunities easier to discover.",
   },
   {
     t: "GIVE PEOPLE OWNERSHIP.",
@@ -267,9 +266,9 @@ function Index() {
               </span>
             </div>
             <h1 className="mb-8 text-5xl font-bold leading-[0.95] tracking-tighter sm:text-7xl md:text-9xl">
-              BUILD.
+              CONNECT.
               <br />
-              EXPERIMENT.
+              BUILD.
               <br />
               <span className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent">
                 SHIP.
@@ -284,8 +283,8 @@ function Index() {
               </p>
             </div>
             <p className="mb-10 w-full max-w-3xl text-center text-lg font-light leading-relaxed text-muted-foreground md:text-xl">
-              I want to help students take ideas from concept to deployment by finding the right
-              mentors, building the right teams and creating products people can actually use. I've
+              I want to help builders take their ideas from concept to deployment by finding the right
+              mentors, building the right teams and structuring products people can actually use. I've
               done this myself and I want to make that journey easier for others at Cornell Tech.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -314,21 +313,23 @@ function Index() {
             <SectionLabel>WHY AM I APPLYING?</SectionLabel>
             <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:items-start lg:gap-20">
               <h2 className="max-w-md text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
-                A mentor, connector and advocate for the talent in this room.
+                Connecting the talent, ideas and opportunities in this room
               </h2>
               <div className="space-y-8 text-xl leading-relaxed text-muted-foreground md:text-2xl">
                 <p className="border-l-2 border-primary pl-6 font-semibold leading-snug text-card-foreground md:text-3xl">
-                  I am applying for Technical Co-President because I want to serve the Cornell Tech
-                  community and help make the most of the incredible technical talent we have here.
-                  I want to be someone who is always ready to listen, to understand what students
-                  need, what is missing and where we can do better.
+                 I am applying for Technical Co-President because I see an opportunity to make the incredible talent in this 
+                 room even more connected and effective. Cornell Tech already brings together ambitious builders, researchers, 
+                 entrepreneurs and industry leaders; I want to help turn that concentration of talent into more collaboration, 
+                 more experimentation and more things that make it beyond the campus.
                 </p>
                 <p className="text-card-foreground">
-                  For me, this role is less about being the most technical person in the room and
-                  more about{" "}
+                  For me, that starts with being someone who is always ready to listen and open to new ideas. 
+                  I want to understand what people need, what they are trying to build and where we can do better
+                  and then help bring the right people, resources and opportunities together.{" "}
+
                   <strong className="text-primary">
-                    listening to the room, mentoring people through the next step, bringing the
-                    right people together and helping the community do its best work.
+                    This role is less about being the most technical person in the room and more about listening to the room, 
+                    mentoring people through the next step and helping the community do its best work.
                   </strong>
                 </p>
               </div>
@@ -345,8 +346,9 @@ function Index() {
             </div>
             <blockquote className="mt-7 text-3xl font-extrabold leading-tight tracking-tight text-card-foreground md:text-5xl lg:text-6xl">
               <span className="text-primary">&ldquo;</span>
-              Cornell Tech already has incredible technical talent. I want to help us turn more of
-              that talent into things we actually build, test and ship.
+              Cornell Tech already has incredible technical talent. I want to help connect that 
+              talent more deeply, across people, disciplines and campuses, so that more great 
+              ideas can come together and take shape.
               <span className="text-purple">&rdquo;</span>
             </blockquote>
             <div className="mx-auto mt-8 h-1 w-16 rounded-full bg-primary shadow-[0_0_24px_rgb(34_211_238_/_55%)]" />
@@ -424,11 +426,9 @@ function Index() {
                   turning complex ideas into practical, deployable systems while balancing cost,
                   reliability, production requirements and scale. This work helped our company reach
                   the Top 20 Startups at the India AI Impact Summit 2026. One of my largest projects
-                  was an AI-powered inspection system developed for the Indian government. It was
-                  designed to detect wear and tear in fuel gas cylinders, improve safety across the
-                  LPG supply chain and protect consumers. The system is now patented:{" "}
-                  <span className="text-card-foreground">{PATENT.title}</span> — Patent No.{" "}
-                  {PATENT.number}.
+                  so far was an AI-powered inspection system for the Indian government, designed to
+                  detect wear and tear in fuel gas cylinders and improve safety across the LPG
+                  supply chain. That work was later granted a patent.
                 </p>
                 <p className="border-l-2 border-primary/40 pl-5 text-card-foreground">
                   For me, technology has never been just about developing a model or writing code.
@@ -456,9 +456,9 @@ function Index() {
                   Patent No. {PATENT.number}
                 </p>
                 <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  This patent covers the automated inspection system I developed for the Indian
-                  government to detect wear and tear damage in fuel gas cylinders, improving safety
-                  across the LPG supply chain and protecting consumers.
+                  This granted patent covers the inspection system I built for the Indian government
+                  to detect wear and tear in fuel gas cylinders and improve safety across the LPG
+                  supply chain.
                 </p>
                 {PATENT.url !== "#" ? (
                   <a
@@ -524,12 +524,12 @@ function Index() {
           className="relative border-b border-border bg-card/30 px-6 md:px-12 lg:px-20 py-28"
         >
           <div className="mx-auto max-w-[1800px]">
-            <SectionLabel>WHAT I'VE BUILT</SectionLabel>
+            <SectionLabel>OTHER WORK I'VE BUILT</SectionLabel>
             <h2 className="text-4xl font-bold tracking-tighter md:text-6xl">
-              AI &amp; <span className="text-primary">Automation</span>
+              AI, <span className="text-primary">Robotics</span> &amp; Automation
             </h2>
             <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
-              Real-world systems built around computer vision, AI, automation and data.
+              A broader portfolio of systems built around vision, automation and practical industrial problem-solving.
             </p>
 
             <div className="mt-14 space-y-8">
@@ -585,28 +585,6 @@ function Index() {
                           {p.noteLabel.toUpperCase()}
                         </div>
                         <p className="text-sm leading-relaxed text-card-foreground">{p.note}</p>
-                        {p.patentUrl && p.patentUrl !== "#" ? (
-                          <a
-                            href={p.patentUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mt-3 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1.5 font-mono text-xs text-primary transition-colors hover:bg-primary/20"
-                          >
-                            View Patent PDF
-                            <svg
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              className="size-3.5"
-                              aria-hidden="true"
-                            >
-                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                              <polyline points="15 3 21 3 21 9" />
-                              <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                          </a>
-                        ) : null}
                       </div>
                     </div>
                   </div>
@@ -620,80 +598,95 @@ function Index() {
         <section id="bring" className="border-b border-border px-6 md:px-12 lg:px-20 py-24">
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>HOW I CAN HELP</SectionLabel>
-            <h2 className="max-w-4xl text-4xl font-bold tracking-tighter md:text-6xl">
-              Connect what already exists
+            <h2 className="max-w-5xl text-4xl font-bold tracking-tighter md:text-6xl">
+              Make Cornell Tech more connected, collaborative and easier to build in.
             </h2>
-            <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
-              Cornell Tech already has incredible resources. I want to make them easier to discover,
-              connect and use.
-            </p>
             <div className="mt-14 divide-y divide-border border-y border-border">
               <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
                 <div className="font-mono text-2xl font-bold text-primary">01</div>
                 <div>
                   <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CONNECT PEOPLE
+                    BUILD A NETWORK OF BUILDERS
                   </h3>
                   <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Program Representatives and Studio Representatives become my starting network.
-                    Understand{" "}
+                    Start with Program Representatives and Studio Representatives to understand{" "}
                     <strong className="text-card-foreground">
                       who is building what, who has what expertise and who is looking for what.
-                    </strong>
+                    </strong>{" "}
+                    Turn that knowledge into a living network that makes it easier to find
+                    collaborators, mentors and technical help.
                   </p>
                 </div>
               </article>
+
               <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
                 <div className="font-mono text-2xl font-bold text-primary">02</div>
                 <div>
                   <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CONNECT PROJECTS
+                    CREATE MORE BUILDING OPPORTUNITIES
                   </h3>
                   <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Identify projects solving related problems across programs and studios. Instead
-                    of five teams independently solving adjacent problems,{" "}
+                    Create more opportunities for people to{" "}
                     <strong className="text-card-foreground">
-                      find the overlap, bring them together and build something stronger.
-                    </strong>
+                      build, test and experiment together
+                    </strong>{" "}
+                      through technical build nights,
+                    project demos, student-led workshops and open-source projects. Create a culture where we spend less time
+                    talking about what we could build and more time actually building it.
                   </p>
                 </div>
               </article>
+
               <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
                 <div className="font-mono text-2xl font-bold text-primary">03</div>
                 <div>
                   <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CONNECT WITH THE OUTSIDE WORLD
+                    CONNECT BEYOND CORNELL TECH
                   </h3>
                   <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Use the student network to identify projects that could benefit from an external
-                    perspective and connect them with{" "}
+                    Build relationships with{" "}
                     <strong className="text-card-foreground">
-                      companies, startups, alumni, researchers and potential users
-                    </strong>
-                    .
-                  </p>
-                  <p className="mt-4 border-l-2 border-primary/40 pl-4 font-mono text-base leading-relaxed text-primary md:text-lg">
-                    Not another networking event. A specific project meeting a specific person who
+                      companies, startups, alumni, researchers and technical communities at places
+                      like NTU, Michigan, Harvard and beyond.
+                    </strong>{" "}
+                    Not another networking event but a specific project meeting a specific person who
                     can move it forward.
                   </p>
                 </div>
               </article>
+
               <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
                 <div className="font-mono text-2xl font-bold text-primary">04</div>
                 <div>
                   <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CONNECT THE NEXT STEP
+                    HELP PROJECTS TAKE THE NEXT STEP
                   </h3>
                   <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    A project should not become “Great demo. Good luck.” Help teams figure out their
-                    next step:{" "}
+                    A project should not become “Great demo. Good luck.” Help teams figure out what
+                    comes next:{" "}
                     <strong className="text-card-foreground">
-                      Research → Pilot → User → Startup → Industry → Next iteration
-                    </strong>
-                    .
+                      Research → Prototype → User → Pilot → Startup → Industry → Next iteration.
+                    </strong>{" "}
+                    The right next step will be different for every project.
                   </p>
-                  <p className="mt-4 border-l-2 border-primary/40 pl-4 font-mono text-base leading-relaxed text-primary md:text-lg">
-                    The next step will be different for every project.
+                </div>
+              </article>
+
+              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
+                <div className="font-mono text-2xl font-bold text-primary">05</div>
+                <div>
+                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
+                    BUILD WITH WHAT WE HAVE
+                  </h3>
+                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
+                    Make it easier to discover and use the resources already around us, while
+                    encouraging the{" "}
+                    <strong className="text-card-foreground">
+                      resourcefulness and “jugaad” mindset
+                    </strong>{" "}
+                    that I’ve used to build products with limited resources. Great building does not
+                    always start with perfect infrastructure; sometimes it starts with figuring out
+                    what is possible with what we have.
                   </p>
                 </div>
               </article>
@@ -713,7 +706,7 @@ function Index() {
                 My First 100 Days
               </h2>
               <p className="mt-6 text-xl leading-relaxed text-muted-foreground md:text-2xl">
-                A practical starting plan for turning student needs into collaboration, prototypes,
+                A practical starting plan for turning student needs into collaboration, prototypes
                 and real opportunities.
               </p>
             </div>
@@ -786,24 +779,26 @@ function Index() {
         <section id="vision" className="border-b border-border px-6 md:px-12 lg:px-20 py-24">
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>MY VISION</SectionLabel>
-            <h2 className="text-4xl font-bold tracking-tighter md:text-6xl">
-              A CTSG That Helps You <span className="text-purple">Build &amp; Connect.</span>
+            <h2 className="max-w-5xl text-5xl font-black tracking-[-0.06em] text-card-foreground md:text-7xl">
+              A CTSG That Helps You <span className="text-primary">Build &amp; Connect.</span>
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              I want to make the Technical President role useful, not ceremonial. That means real
-              help when you're stuck and real introductions when you need them.
+            <p className="mt-6 max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
+              I want the Technical President role to be practical, not ceremonial. That means real
+              support when students are stuck and real opportunities when they need momentum.
             </p>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {PILLARS.map((p) => (
                 <div
                   key={p.t}
-                  className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
+                  className="group rounded-2xl border border-border bg-card/80 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:bg-card"
                 >
-                  <h3 className="font-mono text-xl font-extrabold tracking-[0.15em] text-primary">
+                  <h3 className="font-mono text-xl font-black tracking-[0.14em] text-primary md:text-2xl">
                     {p.t}
                   </h3>
-                  <div className="my-4 h-px bg-border" />
-                  <p className="text-sm leading-relaxed text-muted-foreground">{p.d}</p>
+                  <div className="my-5 h-px bg-gradient-to-r from-primary/80 to-transparent" />
+                  <p className="text-base leading-relaxed text-card-foreground/90 md:text-lg">
+                    {p.d}
+                  </p>
                 </div>
               ))}
             </div>
@@ -820,21 +815,28 @@ function Index() {
             <h2 className="text-4xl font-extrabold tracking-tight md:text-6xl">
               I can help you build and connect you forward.
             </h2>
-            <ul className="mt-10 space-y-4 font-mono text-sm md:text-base">
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-2">
               {[
                 "I've been a student trying to learn new technologies.",
                 "I've led technical teams building products under real constraints.",
                 "I've taken systems from concept → prototype → deployment.",
                 "And I've built a network of alumni, founders, researchers and mentors I can tap for you.",
               ].map((line) => (
-                <li key={line} className="flex items-start gap-3 text-card-foreground">
-                  <span className="text-primary">›</span>
-                  {line}
-                </li>
+                <div
+                  key={line}
+                  className="rounded-xl border border-border bg-card px-5 py-4 text-base font-medium text-card-foreground shadow-sm md:text-lg"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="mt-1 text-primary">›</span>
+                    <span>{line}</span>
+                  </div>
+                </div>
               ))}
-            </ul>
-            <p className="mt-10 text-lg leading-relaxed text-muted-foreground">
-              That gives me a different perspective on what students need someone who can help them
+            </div>
+
+            <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+              That gives me a different perspective on what students need: someone who can help them
               get unstuck technically and someone who can open the right doors.
             </p>
           </div>
@@ -847,25 +849,11 @@ function Index() {
             <h2 className="text-4xl font-extrabold tracking-tight md:text-6xl">
               Hands-on. Collaborative. Persistent.
             </h2>
-            <div className="mt-10 grid gap-10 lg:grid-cols-2">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                I don't believe leadership means having all the answers. It means:
+            <div className="mt-12 max-w-5xl">
+              <p className="text-xl leading-relaxed text-muted-foreground md:text-2xl">
+                I don't believe leadership means having all the answers. It means staying close to
+                the work, solving the real problem and creating space for people to take ownership.
               </p>
-              <div className="space-y-4">
-                {[
-                  "Taking ownership when things get difficult.",
-                  "Finding practical solutions when there isn't an obvious one.",
-                  "Giving people the space to take ownership of their work.",
-                  "And staying with the team until the problem is solved.",
-                ].map((line) => (
-                  <div
-                    key={line}
-                    className="rounded-lg border border-border bg-card px-5 py-4 text-card-foreground"
-                  >
-                    {line}
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -877,15 +865,17 @@ function Index() {
             <h2 className="text-4xl font-bold tracking-tighter md:text-6xl">
               Stuck? Need an Intro? <span className="text-primary">I'm here.</span>
             </h2>
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
               Vote for a Technical President who will listen, find the right mentor and create the
               connections that move your work forward.
             </p>
-            <div className="mx-auto mt-10 max-w-md space-y-2 rounded-lg border border-border bg-card p-6 font-mono text-sm text-card-foreground">
-              <p>Have a bug you can't crack?</p>
-              <p>Need to talk to someone in industry, research, or startups?</p>
-              <p>Want to build something but don't know where to start?</p>
-              <p className="pt-2 text-primary">I'll help you figure it out.</p>
+            <div className="mx-auto mt-10 max-w-xl rounded-2xl border border-primary/20 bg-card p-6 text-left shadow-[0_0_0_1px_rgba(94,234,212,0.06)] md:p-8">
+              <div className="space-y-2 font-mono text-sm text-card-foreground md:text-base">
+                <p>Have a bug you can't crack?</p>
+                <p>Need to talk to someone in industry, research or startups?</p>
+                <p>Want to build something but don't know where to start?</p>
+                <p className="pt-2 text-primary">I'll help you figure it out.</p>
+              </div>
             </div>
             <div className="mt-10">
               <p className="font-mono text-lg font-medium text-card-foreground">Harsh Agrawal</p>
@@ -918,7 +908,7 @@ function Index() {
 
       <footer className="border-t border-border px-6 py-8 md:px-12 lg:px-20">
         <div className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-muted-foreground">
-          <span>© 2026 HARSH AGRAWAL // BUILD. EXPERIMENT. SHIP.</span>
+          <span>© 2026 HARSH AGRAWAL // CONNECT. BUILD. SHIP.</span>
           <div className="flex gap-6">
             <a
               href="https://www.linkedin.com/in/harsh-agrawal-22740/"
