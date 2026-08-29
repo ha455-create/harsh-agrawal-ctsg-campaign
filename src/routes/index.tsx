@@ -207,6 +207,13 @@ const PILLARS = [
   },
 ];
 
+const WHY_METRICS = [
+  { id: "01", icon: "◎", label: "Listen" },
+  { id: "02", icon: "↗", label: "Connect" },
+  { id: "03", icon: "✦", label: "Build" },
+  { id: "04", icon: "→", label: "Ship" },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary/30 selection:text-primary">
@@ -312,26 +319,50 @@ function Index() {
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>WHY AM I APPLYING?</SectionLabel>
             <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:items-start lg:gap-20">
-              <h2 className="max-w-md text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
-                Connecting the talent, ideas and opportunities in this room
-              </h2>
-              <div className="space-y-8 text-xl leading-relaxed text-muted-foreground md:text-2xl">
-                <p className="border-l-2 border-primary pl-6 font-semibold leading-snug text-card-foreground md:text-3xl">
-                 I am applying for Technical Co-President because I see an opportunity to make the incredible talent in this 
-                 room even more connected and effective. Cornell Tech already brings together ambitious builders, researchers, 
-                 entrepreneurs and industry leaders; I want to help turn that concentration of talent into more collaboration, 
-                 more experimentation and more things that make it beyond the campus.
-                </p>
-                <p className="text-card-foreground">
-                  For me, that starts with being someone who is always ready to listen and open to new ideas. 
-                  I want to understand what people need, what they are trying to build and where we can do better
-                  and then help bring the right people, resources and opportunities together.{" "}
+              <div>
+                <h2 className="max-w-md text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
+                  Connecting talent, ideas and opportunities
+                </h2>
 
-                  <strong className="text-primary">
-                    This role is less about being the most technical person in the room and more about listening to the room, 
-                    mentoring people through the next step and helping the community do its best work.
-                  </strong>
+                <div className="mt-10 grid grid-cols-2 gap-3">
+                  {WHY_METRICS.map((item) => (
+                    <div
+                      key={item.id}
+                      className="rounded-xl border border-border bg-card/80 p-4 text-left shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
+                    >
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-mono text-xs font-bold tracking-[0.2em] text-primary">
+                          {item.id}
+                        </span>
+                        <span className="text-xl text-primary">{item.icon}</span>
+                      </div>
+                      <div className="mt-4 font-mono text-sm font-bold tracking-[0.12em] text-card-foreground uppercase">
+                        {item.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <p className="max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
+                  I want the Technical President role to be useful, practical and deeply connected to
+                  what students actually need.
                 </p>
+
+                <ul className="space-y-4 text-lg leading-relaxed text-card-foreground md:text-xl">
+                  {[
+                    "Listen first — Be approachable, open to ideas and understand what the community actually needs",
+                    "Connect- Bring together people, expertise, projects and opportunities across Cornell Tech and beyond.",
+                    "Build — Help turn ambitious ideas into products by finding the right teams, mentors, and resources.",
+                    "Ship — Make it easier for people to take their next step and do their best work.",
+                  ].map((point) => (
+                    <li key={point} className="flex items-start gap-3 rounded-xl border border-border bg-card/70 p-4 md:p-5">
+                      <span className="mt-1.5 text-lg text-primary">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
