@@ -603,7 +603,8 @@ function Index() {
           </div>
         </section>
 
-        {/* HOW I CAN HELP */}
+
+        {/* HOW HELP */}
         <section id="bring" className="border-b border-border px-6 md:px-12 lg:px-20 py-24">
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>HOW I CAN HELP</SectionLabel>
