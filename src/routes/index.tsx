@@ -199,7 +199,7 @@ const PILLARS = [
   },
   {
     t: "EXPERIMENT",
-    d: "Create spaces where students can explore ideas, try unfamiliar technologies and learn without being afraid of failure.",
+    d: "Create more opportunities for students to explore ideas, test unfamiliar technologies and learn by doing.",
   },
   {
     t: "SHIP",
@@ -611,13 +611,12 @@ function Index() {
               Make Cornell Tech more connected, collaborative and easier to build in.
             </h2>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {[
                 ["01", "BUILD A NETWORK", "Map who is building what, who has what expertise and where help is needed."],
-                ["02", "CREATE SPACE", "Run build nights, workshops and collaborations where students can move from talk to action."],
-                ["03", "CONNECT OUTSIDE", "Introduce students to alumni, founders, researchers and industry who can open the right doors."],
-                ["04", "KEEP PROJECTS MOVING", "Help teams see the next step: research, prototype, pilot, startup or deployment."],
-                ["05", "BUILD WITH WHAT EXISTS", "Turn available resources into momentum, even when the infrastructure is not perfect."],
+                ["02", "CONNECT OUTSIDE", "Introduce students to alumni, founders, researchers and industry who can open the right doors."],
+                ["03", "KEEP PROJECTS MOVING", "Help teams see the next step: research, prototype, pilot, startup or deployment."],
+                ["04", "BUILD WITH WHAT EXISTS", "Turn available resources into momentum, even when the infrastructure is not perfect."],
               ].map(([n, title, body]) => (
                 <article
                   key={n}
