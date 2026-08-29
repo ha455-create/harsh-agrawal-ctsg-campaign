@@ -214,6 +214,19 @@ const WHY_METRICS = [
   { id: "04", icon: "→", label: "Ship" },
 ];
 
+const HERO_STATS = [
+  { value: "3+", label: "years in technical leadership" },
+  { value: "1", label: "granted patent" },
+  { value: "5", label: "core focus areas" },
+];
+
+const JOURNEY_STATS = [
+  { label: "ROLE", value: "Technical Lead" },
+  { label: "DURATION", value: "3 years" },
+  { label: "TEAM", value: "Automation + Data Science" },
+  { label: "IMPACT", value: "Top 20 · India AI Impact Summit 2026" },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary/30 selection:text-primary">
@@ -290,10 +303,22 @@ function Index() {
               </p>
             </div>
             <p className="mb-10 w-full max-w-3xl text-center text-lg font-light leading-relaxed text-muted-foreground md:text-xl">
-              I want to help builders take their ideas from concept to deployment by finding the right
-              mentors, building the right teams and structuring products people can actually use. I've
-              done this myself and I want to make that journey easier for others at Cornell Tech.
+              I help people move from idea → prototype → product by finding the right mentors,
+              building the right teams and making the next step obvious.
             </p>
+            <div className="mb-10 grid w-full max-w-4xl gap-4 md:grid-cols-3">
+              {HERO_STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-xl border border-primary/20 bg-card/60 px-5 py-4 backdrop-blur-sm"
+                >
+                  <div className="font-mono text-2xl font-black text-primary md:text-3xl">{stat.value}</div>
+                  <div className="mt-2 text-sm uppercase tracking-[0.15em] text-muted-foreground">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#bring"
@@ -354,7 +379,7 @@ function Index() {
                   {[
                     "Listen first — Be approachable, open to ideas and understand what the community actually needs",
                     "Connect- Bring together people, expertise, projects and opportunities across Cornell Tech and beyond.",
-                    "Build — Help turn ambitious ideas into products by finding the right teams, mentors, and resources.",
+                    "Build — Help turn ambitious ideas into products by finding the right teams, mentors and resources.",
                     "Ship — Make it easier for people to take their next step and do their best work.",
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-3 rounded-xl border border-border bg-card/70 p-4 md:p-5">
@@ -377,9 +402,7 @@ function Index() {
             </div>
             <blockquote className="mt-7 text-3xl font-extrabold leading-tight tracking-tight text-card-foreground md:text-5xl lg:text-6xl">
               <span className="text-primary">&ldquo;</span>
-              Cornell Tech already has incredible technical talent. I want to help connect that 
-              talent more deeply, across people, disciplines and campuses, so that more great 
-              ideas can come together and take shape.
+              Connect people. Build momentum. Ship ideas.
               <span className="text-purple">&rdquo;</span>
             </blockquote>
             <div className="mx-auto mt-8 h-1 w-16 rounded-full bg-primary shadow-[0_0_24px_rgb(34_211_238_/_55%)]" />
@@ -406,66 +429,59 @@ function Index() {
         <section id="journey" className="border-b border-border px-6 md:px-12 lg:px-20 py-24">
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>MY JOURNEY</SectionLabel>
-            <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
               <div>
                 <div className="mb-4 font-mono text-sm font-bold tracking-[0.2em] text-primary">
                   BEFORE CORNELL TECH
                 </div>
                 <h2 className="text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
-                  From Technical Leadership to Systems That Work
+                  From idea to systems that work.
                 </h2>
                 <p className="mt-6 text-xl leading-relaxed text-muted-foreground md:text-2xl">
-                  Before joining Cornell Tech, I spent three years leading technical work at an AI
-                  startup. That experience taught me how to move from an early idea to a reliable
-                  system that can work in the real world.
+                  I spent three years leading technical work at an AI startup, helping turn early
+                  concepts into deployable systems that solve real operational problems.
                 </p>
               </div>
-              <div className="rounded-lg border border-border bg-card p-5 font-mono text-sm lg:justify-self-end lg:w-full lg:max-w-xl">
-                <div className="mb-5 text-base font-extrabold tracking-[0.15em] text-primary">
-                  WORK EXPERIENCE
-                </div>
-                <div className="space-y-4">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                    <span className="text-muted-foreground">ROLE</span>
-                    <span className="font-bold text-primary sm:text-right">Technical Lead</span>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {JOURNEY_STATS.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-xl border border-border bg-card p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
+                  >
+                    <div className="font-mono text-[11px] font-bold tracking-[0.18em] text-primary">
+                      {stat.label}
+                    </div>
+                    <div className="mt-3 text-lg font-bold text-card-foreground md:text-xl">
+                      {stat.value}
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                    <span className="text-muted-foreground">DURATION</span>
-                    <span className="font-bold text-primary sm:text-right">3 years</span>
-                  </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                    <span className="text-muted-foreground">TEAM</span>
-                    <span className="font-bold text-primary sm:text-right">
-                      Automation + Data Science
-                    </span>
-                  </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                    <span className="text-muted-foreground">RECOGNITION</span>
-                    <span className="font-bold text-success sm:text-right">
-                      Top 20 · India AI Impact Summit 2026
-                    </span>
-                  </div>
-                </div>
+                ))}
               </div>
-              <div className="mt-2 max-w-none space-y-8 border-t border-border pt-12 text-xl leading-[1.6] text-muted-foreground lg:col-span-2">
-                <p className="text-2xl font-bold leading-[1.45] text-card-foreground">
-                  I led the automation and data science team, working across technical planning,
-                  implementation, testing and deployment.
-                </p>
-                <p>
-                  The goal was never just to build an impressive prototype. My work focused on
-                  turning complex ideas into practical, deployable systems while balancing cost,
-                  reliability, production requirements and scale. This work helped our company reach
-                  the Top 20 Startups at the India AI Impact Summit 2026. One of my largest projects
-                  so far was an AI-powered inspection system for the Indian government, designed to
-                  detect wear and tear in fuel gas cylinders and improve safety across the LPG
-                  supply chain. That work was later granted a patent.
-                </p>
-                <p className="border-l-2 border-primary/40 pl-5 text-card-foreground">
-                  For me, technology has never been just about developing a model or writing code.
-                  It is about taking an idea, understanding the constraints, building it, testing it
-                  and making it work.
-                </p>
+            </div>
+
+            <div className="mt-12 border-t border-border pt-10">
+              <div className="grid gap-6 lg:grid-cols-3">
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="font-mono text-xs font-bold tracking-[0.2em] text-primary">01</div>
+                  <p className="mt-4 text-lg leading-relaxed text-card-foreground">
+                    I led technical planning, implementation, testing and deployment across real
+                    product work.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="font-mono text-xs font-bold tracking-[0.2em] text-primary">02</div>
+                  <p className="mt-4 text-lg leading-relaxed text-card-foreground">
+                    My work balanced practicality, cost, reliability and production constraints.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="font-mono text-xs font-bold tracking-[0.2em] text-primary">03</div>
+                  <p className="mt-4 text-lg leading-relaxed text-card-foreground">
+                    One of my largest systems was an AI inspection solution for the Indian government,
+                    later granted a patent.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -475,7 +491,7 @@ function Index() {
         <section id="patent" className="border-b border-border px-6 md:px-12 lg:px-20 py-24">
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>PATENT</SectionLabel>
-            <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
+            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <div className="mb-4 font-mono text-sm font-bold tracking-[0.2em] text-primary">
                   GRANTED PATENT
@@ -484,12 +500,7 @@ function Index() {
                   {PATENT.title}
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  Patent No. {PATENT.number}
-                </p>
-                <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  This granted patent covers the inspection system I built for the Indian government
-                  to detect wear and tear in fuel gas cylinders and improve safety across the LPG
-                  supply chain.
+                  Patent No. {PATENT.number} · Industrial AI for safer gas-cylinder inspection.
                 </p>
                 {PATENT.url !== "#" ? (
                   <a
@@ -499,50 +510,19 @@ function Index() {
                     className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 font-mono text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
                   >
                     View Patent PDF
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="size-4"
-                      aria-hidden="true"
-                    >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
+                    <span aria-hidden="true">↗</span>
                   </a>
-                ) : (
-                  <p className="mt-8 font-mono text-xs text-muted-foreground">
-                    [ PDF link will be added once the public Google Drive link is provided ]
-                  </p>
-                )}
+                ) : null}
               </div>
-              <div className="rounded-xl border border-border bg-card p-6 font-mono text-sm">
-                <div className="mb-4 font-bold text-primary">patent_metadata</div>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">TITLE</span>
-                    <span className="max-w-[60%] text-right text-card-foreground">
-                      {PATENT.title}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">NUMBER</span>
-                    <span className="text-primary">{PATENT.number}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">JURISDICTION</span>
-                    <span className="text-card-foreground">India</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">DOMAIN</span>
-                    <span className="text-card-foreground">Industrial AI</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">STATUS</span>
-                    <span className="text-success">Granted</span>
-                  </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="font-mono text-[11px] font-bold tracking-[0.18em] text-primary">DOMAIN</div>
+                  <div className="mt-3 text-xl font-bold text-card-foreground">Industrial AI</div>
+                </div>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="font-mono text-[11px] font-bold tracking-[0.18em] text-primary">STATUS</div>
+                  <div className="mt-3 text-xl font-bold text-success">Granted</div>
                 </div>
               </div>
             </div>
@@ -560,27 +540,25 @@ function Index() {
               AI, <span className="text-primary">Robotics</span> &amp; Automation
             </h2>
             <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted-foreground md:text-2xl">
-              A broader portfolio of systems built around vision, automation and practical industrial problem-solving.
+              Systems built around vision, automation and real-world industrial problem-solving.
             </p>
 
-            <div className="mt-14 space-y-8">
+            <div className="mt-14 space-y-6">
               {PROJECTS.map((p) => (
                 <article
                   key={p.index}
-                  className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30 md:p-10"
+                  className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30 md:p-8"
                 >
-                  <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+                  <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
                     <div>
                       <div className="mb-4 font-mono text-sm font-bold tracking-[0.2em] text-primary">
                         {p.index} — {p.kicker.toUpperCase()}
                       </div>
-                      <h3 className="text-3xl font-extrabold tracking-tight text-card-foreground transition-colors group-hover:text-primary md:text-5xl">
+                      <h3 className="text-3xl font-extrabold tracking-tight text-card-foreground transition-colors group-hover:text-primary md:text-4xl">
                         {p.title}
                       </h3>
-                      <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                        {p.summary}
-                      </p>
-                      <div className="mt-6 flex flex-wrap gap-2">
+                      <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{p.summary}</p>
+                      <div className="mt-5 flex flex-wrap gap-2">
                         {p.stack.map((s) => (
                           <span
                             key={s}
@@ -592,14 +570,14 @@ function Index() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-6">
+                    <div className="grid gap-3">
                       {p.list ? (
-                        <div>
+                        <div className="rounded-xl border border-border bg-card/80 p-4">
                           <div className="mb-3 font-mono text-xs font-bold tracking-[0.2em] text-muted-foreground">
                             {p.listLabel?.toUpperCase()}
                           </div>
                           <ul className="space-y-2">
-                            {p.list.map((item) => (
+                            {p.list.slice(0, 3).map((item) => (
                               <li
                                 key={item}
                                 className="flex items-start gap-3 font-mono text-sm text-card-foreground"
@@ -611,7 +589,7 @@ function Index() {
                           </ul>
                         </div>
                       ) : null}
-                      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+                      <div className="rounded-xl border border-primary/20 bg-primary/5 p-4">
                         <div className="mb-2 font-mono text-xs font-bold tracking-[0.2em] text-primary">
                           {p.noteLabel.toUpperCase()}
                         </div>
@@ -632,95 +610,26 @@ function Index() {
             <h2 className="max-w-5xl text-4xl font-bold tracking-tighter md:text-6xl">
               Make Cornell Tech more connected, collaborative and easier to build in.
             </h2>
-            <div className="mt-14 divide-y divide-border border-y border-border">
-              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
-                <div className="font-mono text-2xl font-bold text-primary">01</div>
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    BUILD A NETWORK OF BUILDERS
-                  </h3>
-                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Start with Program Representatives and Studio Representatives to understand{" "}
-                    <strong className="text-card-foreground">
-                      who is building what, who has what expertise and who is looking for what.
-                    </strong>{" "}
-                    Turn that knowledge into a living network that makes it easier to find
-                    collaborators, mentors and technical help.
-                  </p>
-                </div>
-              </article>
 
-              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
-                <div className="font-mono text-2xl font-bold text-primary">02</div>
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CREATE MORE BUILDING OPPORTUNITIES
+            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+              {[
+                ["01", "BUILD A NETWORK", "Map who is building what, who has what expertise and where help is needed."],
+                ["02", "CREATE SPACE", "Run build nights, workshops and collaborations where students can move from talk to action."],
+                ["03", "CONNECT OUTSIDE", "Introduce students to alumni, founders, researchers and industry who can open the right doors."],
+                ["04", "KEEP PROJECTS MOVING", "Help teams see the next step: research, prototype, pilot, startup or deployment."],
+                ["05", "BUILD WITH WHAT EXISTS", "Turn available resources into momentum, even when the infrastructure is not perfect."],
+              ].map(([n, title, body]) => (
+                <article
+                  key={n}
+                  className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                >
+                  <div className="font-mono text-2xl font-black text-primary">{n}</div>
+                  <h3 className="mt-5 text-xl font-extrabold tracking-tight text-card-foreground md:text-2xl">
+                    {title}
                   </h3>
-                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Create more opportunities for people to{" "}
-                    <strong className="text-card-foreground">
-                      build, test and experiment together
-                    </strong>{" "}
-                      through technical build nights,
-                    project demos, student-led workshops and open-source projects. Create a culture where we spend less time
-                    talking about what we could build and more time actually building it.
-                  </p>
-                </div>
-              </article>
-
-              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
-                <div className="font-mono text-2xl font-bold text-primary">03</div>
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    CONNECT BEYOND CORNELL TECH
-                  </h3>
-                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Build relationships with{" "}
-                    <strong className="text-card-foreground">
-                      companies, startups, alumni, researchers and technical communities at places
-                      like NTU, Michigan, Harvard and beyond.
-                    </strong>{" "}
-                    Not another networking event but a specific project meeting a specific person who
-                    can move it forward.
-                  </p>
-                </div>
-              </article>
-
-              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
-                <div className="font-mono text-2xl font-bold text-primary">04</div>
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    HELP PROJECTS TAKE THE NEXT STEP
-                  </h3>
-                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    A project should not become “Great demo. Good luck.” Help teams figure out what
-                    comes next:{" "}
-                    <strong className="text-card-foreground">
-                      Research → Prototype → User → Pilot → Startup → Industry → Next iteration.
-                    </strong>{" "}
-                    The right next step will be different for every project.
-                  </p>
-                </div>
-              </article>
-
-              <article className="grid gap-5 py-8 md:grid-cols-[5rem_1fr] md:gap-8 md:py-10">
-                <div className="font-mono text-2xl font-bold text-primary">05</div>
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-card-foreground md:text-4xl">
-                    BUILD WITH WHAT WE HAVE
-                  </h3>
-                  <p className="mt-5 text-xl leading-[1.65] text-card-foreground/90 md:text-2xl">
-                    Make it easier to discover and use the resources already around us, while
-                    encouraging the{" "}
-                    <strong className="text-card-foreground">
-                      resourcefulness and “jugaad” mindset
-                    </strong>{" "}
-                    that I’ve used to build products with limited resources. Great building does not
-                    always start with perfect infrastructure; sometimes it starts with figuring out
-                    what is possible with what we have.
-                  </p>
-                </div>
-              </article>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{body}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -731,52 +640,31 @@ function Index() {
             <SectionLabel>MY PLAN</SectionLabel>
             <div className="max-w-4xl">
               <div className="font-mono text-sm font-bold tracking-[0.2em] text-primary">
-                FROM NEED TO IMPACT
+                FIRST 100 DAYS
               </div>
               <h2 className="mt-4 text-4xl font-extrabold leading-[1.08] tracking-tight md:text-6xl">
-                My First 100 Days
+                Listen. Connect. Build. Repeat.
               </h2>
-              <p className="mt-6 text-xl leading-relaxed text-muted-foreground md:text-2xl">
-                A practical starting plan for turning student needs into collaboration, prototypes
-                and real opportunities.
-              </p>
             </div>
-            <div className="mt-14 grid gap-5 md:grid-cols-2">
+            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {FIRST_HUNDRED_DAYS.map((phase, index) => (
                 <article
                   key={phase.days}
-                  className="group rounded-xl border border-border bg-card p-7 transition-colors hover:border-primary/50 md:p-8"
+                  className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/50"
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="font-mono text-base font-bold tracking-[0.2em] text-primary">
-                      {phase.days}
-                    </span>
-                    <span className="font-mono text-base text-muted-foreground">0{index + 1}</span>
+                  <div className="font-mono text-sm font-bold tracking-[0.2em] text-primary">
+                    {phase.days}
                   </div>
-                  <h3 className="mt-6 text-3xl font-extrabold tracking-tight text-card-foreground transition-colors group-hover:text-primary md:text-4xl">
-                    {phase.title}
-                  </h3>
-                  <p className="mt-5 text-xl leading-relaxed text-card-foreground md:text-2xl">
-                    {phase.description}
-                  </p>
-                  <div className="mt-7 border-t border-primary/20 pt-5">
-                    <div className="font-mono text-sm font-bold tracking-[0.2em] text-primary">
+                  <div className="mt-4 text-2xl font-extrabold text-card-foreground">{phase.title}</div>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{phase.description}</p>
+                  <div className="mt-5 border-t border-primary/20 pt-4">
+                    <div className="font-mono text-[10px] font-bold tracking-[0.2em] text-primary">
                       OUTPUT
                     </div>
-                    <p className="mt-3 text-lg font-semibold leading-relaxed text-card-foreground/90 md:text-xl">
-                      {phase.output}
-                    </p>
+                    <div className="mt-2 text-sm font-medium text-card-foreground">{phase.output}</div>
                   </div>
                 </article>
               ))}
-            </div>
-            <div className="mt-6 rounded-xl border border-primary/30 bg-primary/5 p-7 md:p-8">
-              <div className="font-mono text-sm font-bold tracking-[0.2em] text-primary">
-                100 DAYS →
-              </div>
-              <p className="mt-3 text-2xl font-extrabold tracking-tight text-card-foreground md:text-3xl">
-                A system that continues.
-              </p>
             </div>
           </div>
         </section>
@@ -788,16 +676,19 @@ function Index() {
         >
           <div className="mx-auto max-w-[1800px]">
             <SectionLabel>WHAT I BELIEVE</SectionLabel>
-            <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-              {BELIEFS.map((b) => (
+            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {BELIEFS.map((b, index) => (
                 <div
                   key={b.t}
-                  className="bg-card p-7 transition-colors hover:bg-primary/[0.04] md:p-8"
+                  className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
                 >
-                  <h3 className="font-mono text-xl font-extrabold leading-snug tracking-[0.08em] text-primary md:text-2xl">
+                  <div className="font-mono text-xs font-bold tracking-[0.2em] text-primary">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="mt-4 font-mono text-xl font-extrabold leading-snug tracking-[0.08em] text-primary md:text-2xl">
                     {b.t}
                   </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-card-foreground md:text-xl">
+                  <p className="mt-4 text-base leading-relaxed text-card-foreground md:text-lg">
                     {b.d}
                   </p>
                 </div>
