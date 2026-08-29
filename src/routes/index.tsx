@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 const PATENT = {
   title: "SYSTEM AND METHOD OF CHECKING FUEL GAS CYLINDERS FOR WEAR AND TEAR DAMAGE",
   number: "600007",
-  url: "#", // replace with the public Google Drive link
+  url: "https://drive.google.com/file/d/1gKvD60cuR15KcYbljyK_XZ5ZGxx1qm5p/view?usp=sharing",
 };
 
 const NAV = [
